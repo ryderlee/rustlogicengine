@@ -1,0 +1,18 @@
+[package]
+name = "rustlogicengine"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Generic rule-set engine for time-series rules: nested All/Any/None groups over closed-bar series values, with crosses, turning and rising semantics."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ryderlee/rustlogicengine"
+readme = "README.md"
+keywords = ["rules", "rule-engine", "trading", "time-series", "logic"]
+categories = ["algorithms", "data-structures"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"], optional = true }
+serde_json = { version = "1", optional = true, features = ["unbounded_depth"] }
+
+[features]
+serde = ["dep:serde", "dep:serde_json"]
